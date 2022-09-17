@@ -7,7 +7,7 @@ End goal of the program
 -build will interact with the user through a cli, allowing the user to set a email account of their choice and  mailing groups with unique things to send to.
 -mail will be sent at scheduled time regardless of user absence
 
-#mingB_sender
+# mingB_sender
 my first try at a mailing bot. incomplete but shows thats its doable
 what it can do
 	-save and use a given email account. note: stores account and password together as a txt file.
