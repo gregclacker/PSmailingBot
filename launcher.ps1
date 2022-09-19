@@ -1,38 +1,9 @@
 ﻿Using module ".\filerefrence.psm1"
+Using modual ".\struts.psm1"
 #Add-Type -AssemblyName System.Windows.MessageBox
 #(New-Object -ComObject Wscript.Shell).Popup( "note!!!", 0, (get-location).path, 0x1)
 
-funciton Test-URL{
-    prama(
-        [Parameter(Mandatory,ValueFromPipeline,ValueFromPipelineByPropertyName)]
-        [ValidatePattern("^(http|https)://")]
-        [Alias('url')][string]$uri,
-        [ValidateScript({$_ -ge 0})]
-        [int]$timeout = 15
-    )
-
-    try{
-        $reqParam = @{
-        Uri = $uri
-        UseBasicParsing = $True
-        DisableKeepAlive = $True
-        AllowUnencryptedAuthentication = $True
-        Method = 'Head'
-        ErorrAction = 'stop'
-        TimeoutSec = $timeout
-        }
-        $req = Invoke-WebRequest @reqParam
-        if($req.statuscode -lt 200 -or $req.statuscode -ge 199){
-            $True
-            <#Switch($req.statuscode){
-                200 {$True}
-                default {$True}
-            }#>
-        }
-    }
-    Catch{}
-    $false
-}
+$version = "1"
 
 Write-Host "srcdir form roaming:`t" $dir_mailBot
 if(-not (Test-Path -Path ($env:APPDATA+$dir_mailBots))){
