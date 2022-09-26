@@ -1,5 +1,5 @@
 ﻿Using module ".\filerefrence.psm1"
-Using modual ".\struts.psm1"
+Using module ".\struts.psm1"
 #Add-Type -AssemblyName System.Windows.MessageBox
 #(New-Object -ComObject Wscript.Shell).Popup( "note!!!", 0, (get-location).path, 0x1)
 
