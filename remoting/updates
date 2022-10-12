@@ -1,0 +1,3 @@
+#####apparently (google gmail)[https://support.google.com/accounts/answer/6010255?hl=en&utm_source=google-account&utm_medium=profile-less-secure-apps-card] dosent support smtp anymore (now oauth - basically my app wont get to see anyhting about user info). 
+
+this recent change means non existant beginner friendly documentation. :(
